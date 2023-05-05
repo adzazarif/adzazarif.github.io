@@ -11,6 +11,7 @@
 :root{
     --orange:#ff7800;
     --cream: #d4a668;
+    --bg: #;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.2);
 }
 #title{
@@ -232,9 +233,105 @@ header {
 .skill-experience .skill .icon-row2 .icon i{
     font-size: 40px;
 }
+/* footer */
+footer{
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding: 25px 0;
+}
 
+/* section contact us */
+.contact{
+    display: flex;
+    width: 75rem;
+    
+}
+.contact .information{
+    border-radius: 10px;
+    width: 40%;
+    background-color: #814b04;
+    padding: 20px;
+    color: #fff;
+}
 
-
+.contact .information h1{
+    margin-bottom: 10px;
+}
+.contact .information .desc{
+    margin-bottom: 50px;
+}
+.contact .information .detail{
+    display: flex;
+    margin-bottom: 20px;
+}
+.contact .information .detail i{
+    margin-right: 15px;
+}
+.contact .information .social-media{
+    margin-top: 100px;
+}
+.contact .information .social-media i{
+    font-size: 25px;
+    margin-right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.contact .information .social-media i:hover{
+    background-color: var(--orange);
+}
+.contact .message{
+    width: 60%;
+    padding: 20px;
+}
+.contact .message .cont{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .message .cont .input-groups{
+    width: 46%;
+    margin-bottom: 20px;
+}
+.contact .message .cont .input-groups input{
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #d1d1d1;
+}
+.contact .choice{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .choice .input-groups input{
+    margin-right: 10px;
+}
+.contact .message .inbox{
+    margin-top: 35px;
+}
+.contact .message .inbox input{
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #d1d1d1 ;
+}
+.contact .message .btn{
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 30px;
+    left: 580px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--box-shadow);
+    background-color: var(--cream);
+    transition: .3s;
+}
+.contact .message .btn:hover{
+    background-color: #814b04;
+    color: #fff;
+}
 /* Animasi Scroll */
 .transparan{
     opacity: 0;
