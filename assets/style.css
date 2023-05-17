@@ -205,7 +205,8 @@ header {
     transition: .3s;
 }
 .skill-experience .skill .icon-row1 .icon:hover {
-    background-color: var(--cream);
+    background-color: #facf96;
+    box-shadow: var(--box-shadow);
 }
 .skill-experience .skill .icon-row1 .icon i{
     font-size: 40px;
@@ -228,7 +229,8 @@ header {
     transition: .3s;
 }
 .skill-experience .skill .icon-row2 .icon:hover {
-    background-color: var(--cream);
+    background-color: #facf96;
+    box-shadow: var(--box-shadow);
 }
 .skill-experience .skill .icon-row2 .icon i{
     font-size: 40px;
