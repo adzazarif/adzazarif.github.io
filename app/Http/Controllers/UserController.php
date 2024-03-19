@@ -53,4 +53,9 @@ class UserController extends Controller
             "data"  => $data 
         ]);
     }
+
+    public function unauthorized()
+    {
+        return view("authentication.eror-unauthorized");
+    }
 }

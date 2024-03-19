@@ -5,7 +5,7 @@
   class="light-style customizer-hide"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path="../assets/"
+  data-assets-path="/assets/"
   data-template="vertical-menu-template-free"
 >
   <head>
@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Login</title>
+    <title>Register Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
 
     <meta name="description" content="" />
 
@@ -32,7 +32,7 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="/assets/vendor/fonts/boxicons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Core CSS -->
     <link rel="stylesheet" href="/assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -46,6 +46,9 @@
     <link rel="stylesheet" href="/assets/vendor/css/pages/page-auth.css" />
     <!-- Helpers -->
     <script src="/assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/assets/js/config.js"></script>
   </head>
 
@@ -55,7 +58,7 @@
     <div class="container-xxl">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
-          <!-- Register -->
+          <!-- Register Card -->
           <div class="card">
             <div class="card-body">
               <!-- Logo -->
@@ -116,51 +119,63 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="app-brand-text demo text-body fw-bolder">Tugas Website</span>
+                  <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome to Zarif</h4>
-              <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+              <h4 class="mb-2">Adventure starts here 🚀</h4>
+              <p class="mb-4">Make your app management easy and fun!</p>
+
+              <form id="formAuthentication" class="mb-3" action="/register" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="text" name="email" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus/>
-                  @error('email')
-                  <small style="color: red">{{ $message }}</small>
-                  @enderror
-                </div>
-                <div class="mb-3 form-password-toggle">
-                  <div class="d-flex justify-content-between">
-                    <label class="form-label" for="password">Password</label>
-                  </div>
-                  <div class="input-group input-group-merge">
-                    <input type="password" name="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"/>
-                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                  </div>
-                    @error('email')
-                    <small style="color: red">{{ $message }}</small>
-                    @enderror
+                  <label for="username" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="username" name="name" placeholder="Enter your username" autofocus/>
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                  <label for="email" class="form-label">Email</label>
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
                 </div>
-                @error('err')   
-                <div class="alert alert-danger" role="alert">{{ $message }}</div>
-                @enderror
+                <div class="mb-3 form-password-toggle">
+                  <label class="form-label" for="password">Password</label>
+                  <div class="input-group input-group-merge">
+                    <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password"/>
+                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlSelect1" class="form-label">Role</label>
+                  <select class="form-select" name="role" id="exampleFormControlSelect1" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary d-grid w-100">Sign up</button>
               </form>
 
               <p class="text-center">
-                <span>New on our platform?</span>
-                <a href="/register">
-                  <span>Create an account</span>
+                <span>Already have an account?</span>
+                <a href="auth-login-basic.html">
+                  <span>Sign in instead</span>
                 </a>
               </p>
             </div>
           </div>
-          <!-- /Register -->
+          <!-- Register Card -->
         </div>
       </div>
+    </div>
+
+    <!-- / Content -->
+
+    <div class="buy-now">
+      <a
+        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
+        target="_blank"
+        class="btn btn-danger btn-buy-now"
+        >Upgrade to Pro</a
+      >
     </div>
 
     <!-- Core JS -->

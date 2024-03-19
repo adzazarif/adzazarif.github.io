@@ -68,16 +68,16 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
-      <li class="menu-item active">
+      <li class="menu-item {{ Request::routeIs('dashboard') ? 'active' : '' }}">
         <a href="/dashboard" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
       </li>
-      <li class="menu-item">
-        <a href="/users" class="menu-link">
+      <li class="menu-item {{ Request::routeIs('viewBiodata') ? 'active' : '' }}">
+        <a href="/biodata" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
-          <div data-i18n="Analytics">Tugas</div>
+          <div data-i18n="Analytics">Biodata</div>
         </a>
       </li>
     </ul>
